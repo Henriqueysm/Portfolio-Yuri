@@ -77,11 +77,10 @@ Jogo interativo desenvolvido com JavaScript puro.
 
 ## 📸 Preview
 
-![preview][(./imagens/preview.png)](https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%201.png)
-https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%202.png
-https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%203.png
-https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%204.png
-https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%205.png
+![Print 1](C:\Users\yurih\OneDrive\Documentos\Portfolio-Yuri\imagens\print 1.png)
+
+![Print 2] (imagens\print 2.png)
+
 
 ---
 
