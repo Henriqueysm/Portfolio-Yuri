@@ -33,13 +33,13 @@ Aqui estão alguns dos projetos disponíveis no portfólio:
 
 * Descrição breve do projeto
 * Tecnologias usadas
-* [🔗 Ver projeto](#)
+* [🔗 Ver projeto](https://github.com/Henriqueysm/arquivo-jedi)
 
 ### 🔹 Projeto 2
 
 * Descrição breve
 * Tecnologias
-* [🔗 Ver projeto](#)
+* [🔗 Ver projeto](https://github.com/Henriqueysm/Fast-delivery)
 
 ---
 
