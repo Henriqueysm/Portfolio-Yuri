@@ -77,13 +77,17 @@ Jogo interativo desenvolvido com JavaScript puro.
 
 ## 📸 Preview
 
-![Print 1](imagens/print-1.png)
-
-[Print 2](imagens/print-2.png)
-
-![Print 3](imagens/print-3.png)
-
 <img src="./imagens/print 1.png" alt="descrição" width="800">
+
+<img src="./imagens/print 2.png" alt="descrição" width="800">
+
+<img src="./imagens/print 3.png" alt="descrição" width="800">
+
+<img src="./imagens/print 4.png" alt="descrição" width="800">
+
+<img src="./imagens/print 5.png" alt="descrição" width="800">
+
+
 
 ---
 
