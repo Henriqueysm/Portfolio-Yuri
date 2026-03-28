@@ -1,0 +1,1216 @@
+  @font-face {
+    font-family: 'fonte2';
+    src: url('fonte/Varino - Normal.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'fonte1';
+    src: url('fonte/nasalization-rg.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'mario';
+    src: url('fonte/Super-Mario-World.ttf') format('truetype');
+  }
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.score-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.score-container h1 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.best-scores {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffa500;
+    margin-bottom: 15px;
+}
+
+#start-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-btn:hover {
+    background-color: #45a049;
+}
+
+#start-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.game-board{
+    width: 100%;
+    height: 900px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#60ADCF, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: piper-animation 1.5s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    margin-bottom: 15px;
+    position: absolute;
+    width: 550px;
+    top: 30px;
+    animation: clouds-animation 20s infinite linear;
+    z-index: 0;
+}
+
+
+@keyframes piper-animation {
+    from {
+        right: 0px;
+       }
+
+    to {
+        right: 100%;
+       }
+}
+
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+    
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -500px;
+    }
+
+    to {
+        right: 100%;;
+    }
+}
+
+
+/* Estiliza a barra de rolagem inteira */
+::-webkit-scrollbar {
+  width: 7px; /* Largura da barra vertical */
+  height: 12px; /* Altura da barra horizontal */
+}
+
+/* Cor e estilo da área da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, var(--primary-color), var(--tertiary-color));
+}
+
+/* Estilo do botão de rolagem */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color); /* Cor da barra de rolagem */
+  border-radius: 8px; /* Arredondar a barra */
+}
+
+/* Cor ao passar o mouse sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background: #f6fe04; /* Cor ao passar o mouse */
+}
+
+/* Estilo da extremidade (opcional) */
+::-webkit-scrollbar-corner {
+  background: #1a1a1a; /* Cor no canto (quando barra horizontal e vertical se encontram) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #01C815;
+    --tertiary-color: #99E1E0;
+    --text-color: #ffffff;
+    --background-color: #f0f8ff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --font-main: 'mario', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--primary-color), var(--tertiary-color));
+    font-family: var(--font-main);
+    color: var(--text-color);
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+.centro {
+  text-align: center;
+}
+
+  nav.menu-lateral {
+    width: 100px;
+    height: 100%;
+    padding: 10px 0 40px 2%;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    z-index: 4;
+}
+
+.menu-lateral.ativo {
+    width: 400px;
+    background-color: #2443cf;
+}
+
+
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 0px;
+}
+
+.btn-expandir, .icon > .svg{
+    color: #f6fe04;
+    font-size: 24px;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+ul {
+    height: 100%;
+    list-style: none;
+    margin-left: 50px;
+    
+}
+
+ul li.item-menu a{
+  font-family: 'mario';
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 20px 0px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+ul li.item-menu:hover{
+    background-color:  #f6fe04;
+
+}
+
+ul li.item-menu a:hover{
+  color:#0056b3;
+}
+  
+ul li.item-menu{
+    transition: .2s;
+}
+   
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+    text-align: left;
+
+}
+
+h2, h3 {
+  text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.7);
+  font-family: var(--font-main);
+  color: yellow;
+}
+
+.title{
+    text-align: center;
+}
+
+
+p {
+    font-family: 'fonte1';
+    font-size: 110%;
+    line-height: 150%;
+    color:rgb(255, 255, 255);
+    padding-left: 5%;
+    text-align: center;
+}
+
+a:hover{
+  text-decoration: underline 4px;
+  
+}
+
+
+.container-header{
+  min-height: 100vh;
+  margin: 0px auto;
+  align-items: center;
+  columns: auto 80rem;
+}
+
+.container-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-15%, 30%);
+}
+
+.img-header img{
+  border: 10% solid #f6fe04;
+  border-radius: 50%;
+  margin-left: 250px;
+}
+
+.img-header{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+  0%{
+    top:0;
+  }
+  100%{
+    top:30px;
+  }
+}
+
+.nome-header h1{
+  font-size: 3.5rem;
+  width: 100%;
+  margin-left: 100px;
+  color:  #ffff00;
+  text-shadow: 2px 4px 2px rgba(23, 24, 24, 0.701);
+}
+
+
+
+.typewriter{
+  text-align: end;
+  margin: -35px 20px;
+  color:  #00ff0d;
+  text-shadow: 2px 4px 2px rgba(50, 106, 210, 0.701);
+}
+
+.redes{
+  width: 100%;
+  display: flex;
+  text-align: end;
+  justify-content: end;
+  columns: auto 80rem;
+  gap: 1%;
+}
+
+
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s steps(1) infinite alternate ease-in-out;
+}
+
+@keyframes blink {
+  50% {
+  
+    opacity: 0;
+  }
+}
+
+
+/* BOTÕES DE REDES SOCIAIS*/
+
+
+  .socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 1s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+  background-color: #fa0070;
+  transition-duration: 0.3s;
+  }  
+  .containerOne:hover {
+  box-shadow: 0px 0px 30px 1px #fa0070;
+  }  
+  /* Github*/
+  .containerTwo:hover {
+  background-color: #9c01bb;
+  transition-duration: 0.3s;
+  }
+  .containerTwo:hover {
+  box-shadow: 0px 0px 30px 1px #9c01bb;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+  background-color: #03a1fd;
+  transition-duration: 0.3s;
+  }
+  .containerThree:hover {
+  box-shadow: 0px 0px 30px 1px #03a1fd;
+  } 
+  /* Whatsapp*/
+  .containerFour:hover {
+  background-color: #0f0;
+  transition-duration: 0.3s;
+  }
+  .containerFour:hover {
+  box-shadow: 0px 0px 30px 1px #0f0;
+  } 
+  
+  .socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+  }
+  .socialSvg {
+  width: 17px;
+  }
+  .socialSvg path {
+  fill: rgb(255, 255, 255);
+  }
+  .socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+  }
+  @keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+  
+
+.button-baixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Esconde o botão inicialmente */
+}
+
+/* Centraliza a seção */
+#sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: auto; /* Garante que ocupe toda a tela */
+  margin-bottom: -100px; /*diminui o espaço do fim da seção*/
+  padding: 20px; /* Evita que o conteúdo encoste nas bordas */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Estiliza os containers */
+.sobre-container, .sobre-container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px; /* Define uma largura máxima */
+  width: 100%;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
+
+
+/*EFEITO QUE APARECE DEVAGAR OS ICONES TEXTOS E IMG*/
+.efeito, .efeito-img, .titulo, .efeito-div{ /*efeito para que suma e o JS traga de volta*/
+    visibility: hidden;
+}
+.efeito-div{
+    margin: 40px;
+}
+/*FIM DO EFEITO*/
+
+
+/*BOTAO DO CURRUCLO = MARIO PULANDO*/
+.curriculo {    
+    font-family: 'mario';
+    font-size: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+  
+  .curriculo:hover {
+    background-color: #0056b3;
+}/*FIM DO BOTAO DO CURRUCLO = MARIO PULANDO*/
+
+
+
+
+/* Seção de Conhecimento */
+#conhecimento {
+  color: #333;
+  padding: 100px 0px;
+}
+
+.secao div h2 {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.conhecimento-container {
+  display: flex;
+  flex-direction: column; /* Mantém os itens um abaixo do outro */
+  width: 100%; /* Ocupa 100% da tela */
+}
+
+.conhecimento-item {
+  width: 1000px; /* Agora ocupa toda a largura disponível */
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc; /* Linha separadora entre itens */
+  
+}
+
+.conhecimento-titulo {
+  width: 100%;
+  text-align: left;
+  padding: 15px 20px;
+  background-color: #00509e;
+  color: #e8eff7;
+  font-family: 'mario';
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.conhecimento-titulo svg {
+  transition: transform 0.3s ease;
+}
+
+.conhecimento-item.active .conhecimento-titulo svg {
+  transform: rotate(180deg); /* Ícone vira ao expandir */
+}
+
+.conhecimento-conteudo {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #e1e1e1;
+  display: none; /* Escondido por padrão */
+  box-sizing: border-box;
+  
+}
+
+.conhecimento-item.active .conhecimento-conteudo {
+  display: block; /* Exibe quando ativo */
+}
+
+
+
+/* Ícones */
+.icones {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.icon-conhecimento {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.icon-conhecimento:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+
+
+
+
+/* PARTE DE CARDS DE PROJETOS*/
+.projetos{
+  min-height: 100vh;
+}
+
+.projetos h2{
+    line-height: 80px;
+    margin-bottom: 50px;
+}
+
+  .cards-container{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os cards se ajustem na tela */
+  }
+
+  .img-port {
+    width: 300px;
+    height: 350px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    margin: 10px; /* Para dar um espaço entre os cards */
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+/* FIM DA PARTE DE CARDS DE PROJETOS*/
+
+
+  
+.contatos {
+  height: 100vh; /* Ocupa 100% da altura da tela */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  align-items: center; /* Centraliza horizontalmente */
+  background-image: url(imagens/SuperMarioMaker-Wallpaper-1920x10805.png);
+  background-attachment: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contatos h2 {
+  margin-bottom: 60px; /* Espaço abaixo do título */
+  text-align: center;
+}
+
+.contatos-container {
+  width: 100%;
+  max-width: 400px; /* Máxima largura do formulário */
+  padding: 20px;
+  background: rgba(140, 205, 246, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.button-confirm {
+  margin: 10px auto 0 auto;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: #01C815;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'mario';
+}
+
+.button-confirm:hover {
+  background-color: #076510;
+}
+
+/* Footer */
+footer {
+  height: 5vh;
+  width: 100%;
+  background-color: #D7A039;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.txt-foot {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  
+}
+
+@media (max-width: 480px) {
+  .contatos h2 {
+    font-size: 24px;
+  }
+
+  .contatos-container {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .input, textarea, .button-confirm {
+    font-size: 12px;
+  }
+}
+
+
+
+
+/*botão do CURRICULO */
+.loader {
+    width: fit-content;
+    font-size: 19px;
+    font-family: 'mario';
+    line-height: 1.4;
+    font-weight: bold;
+    padding: -10px 30px 50px;
+    position: relative;
+    overflow: hidden;
+    animation: l10-0 2s infinite cubic-bezier(1, 175, 0.5, 175);
+  }
+  .loader::before {
+    content: "Curriculo";
+    display: inline-block;
+    animation: l10-2 2s infinite;
+  }
+  .loader::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    top: 110%;
+    left: calc(50% - 16px);
+    background: linear-gradient(
+          90deg,
+          #0000 12px,
+          #f92033 0 22px,
+          #0000 0 26px,
+          #fdc98d 0 32px,
+          #0000
+        )
+        bottom 26px left 50%,
+      linear-gradient(90deg, #0000 10px, #f92033 0 28px, #fdc98d 0 32px, #0000 0)
+        bottom 24px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 10px,
+          #643700 0 16px,
+          #fdc98d 0 20px,
+          #000 0 22px,
+          #fdc98d 0 24px,
+          #000 0 26px,
+          #f92033 0 32px,
+          #0000 0
+        )
+        bottom 22px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 8px,
+          #643700 0 10px,
+          #fdc98d 0 12px,
+          #643700 0 14px,
+          #fdc98d 0 20px,
+          #000 0 22px,
+          #fdc98d 0 28px,
+          #f92033 0 32px,
+          #0000 0
+        )
+        bottom 20px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 8px,
+          #643700 0 10px,
+          #fdc98d 0 12px,
+          #643700 0 16px,
+          #fdc98d 0 22px,
+          #000 0 24px,
+          #fdc98d 0 30px,
+          #f92033 0 32px,
+          #0000 0
+        )
+        bottom 18px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 8px,
+          #643700 0 12px,
+          #fdc98d 0 20px,
+          #000 0 28px,
+          #f92033 0 30px,
+          #0000 0
+        )
+        bottom 16px left 50%,
+      linear-gradient(90deg, #0000 12px, #fdc98d 0 26px, #f92033 0 30px, #0000 0)
+        bottom 14px left 50%,
+      linear-gradient(
+          90deg,
+          #fdc98d 6px,
+          #f92033 0 14px,
+          #222a87 0 16px,
+          #f92033 0 22px,
+          #222a87 0 24px,
+          #f92033 0 28px,
+          #0000 0 32px,
+          #643700 0
+        )
+        bottom 12px left 50%,
+      linear-gradient(
+          90deg,
+          #fdc98d 6px,
+          #f92033 0 16px,
+          #222a87 0 18px,
+          #f92033 0 24px,
+          #f92033 0 26px,
+          #0000 0 30px,
+          #643700 0
+        )
+        bottom 10px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 10px,
+          #f92033 0 16px,
+          #222a87 0 24px,
+          #feee49 0 26px,
+          #222a87 0 30px,
+          #643700 0
+        )
+        bottom 8px left 50%,
+      linear-gradient(
+          90deg,
+          #0000 12px,
+          #222a87 0 18px,
+          #feee49 0 20px,
+          #222a87 0 30px,
+          #643700 0
+        )
+        bottom 6px left 50%,
+      linear-gradient(90deg, #0000 8px, #643700 0 12px, #222a87 0 30px, #643700 0)
+        bottom 4px left 50%,
+      linear-gradient(90deg, #0000 6px, #643700 0 14px, #222a87 0 26px, #0000 0)
+        bottom 2px left 50%,
+      linear-gradient(90deg, #0000 6px, #643700 0 10px, #0000 0) bottom 0px left
+        50%;
+    background-size: 34px 2px;
+    background-repeat: no-repeat;
+    animation: inherit;
+    animation-name: l10-1;
+  }
+  @keyframes l10-0 {
+    0%,
+    30% {
+      background-position: 0 0px;
+    }
+    50%,
+    100% {
+      background-position: 0 -0.1px;
+    }
+  }
+  @keyframes l10-1 {
+    50%,
+    100% {
+      top: 109.5%;
+    }
+  }
+  @keyframes l10-2 {
+    0%,
+    30% {
+      transform: translateY(0);
+    }
+    80%,
+    100% {
+      transform: translateY(-260%);
+    }
+  }
+/*fim de botão de curriculo*/
+  
+
+
+/* Responsividade */
+/* Celulares */
+@media only screen and (max-width: 767px) {
+ 
+  .container-header {
+    margin: 10px;
+    flex-direction: column;
+ 
+  }
+
+  .container-1 {
+    flex-direction: column;
+    text-align: center;
+    transform: translate(0, 0);
+  }
+
+  .img-header img {
+    margin-left: 0;
+    width: 250px;
+    margin-top: 40px;
+
+  }
+
+  .nome-header h1 {
+    font-size: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .container-2 {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  
+
+.efeito-div {
+  width: 100%;
+  font-size: 1rem; /* Ajusta o tamanho do texto */
+  max-width: 100%; /* Limita a largura do texto */
+  text-align: center; /* Centraliza o texto */
+}
+
+.sobre-container, .sobre-container1 {    
+  padding: 20px;
+  max-width: 100%;
+}
+
+
+.conhecimento-item {
+  max-width: 400px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc; /* Linha separadora entre itens */
+  
+}
+
+.cards-container {
+  gap: 20px; /* Menor espaçamento entre os cards */
+}
+
+.img-port {
+  width: 450px; /* Reduz a largura dos cards */
+  height: 300px; /* Reduz a altura dos cards */
+}
+
+.projetos{
+  margin-bottom: 100px;
+}
+
+
+.img-port {
+  width: 380px;
+}
+
+.projetos h2 {
+  font-size: 24px; /* Ajusta o tamanho do título */
+}
+
+.contatos h2 {
+  margin: -200px auto 100px; /* Espaço abaixo do título */
+  text-align: center;
+}
+
+.contatos-container {
+  width: 80%;
+  max-width: 400px;
+}
+
+.input, textarea, .button-confirm {
+  font-size: 14px;
+}
+
+  .redes {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container-header {
+    margin: 50px;
+    flex-direction: column;
+  }
+
+  .container-1 {
+    flex-direction: column;
+    text-align: center;
+    transform: translate(0, 0);
+  }
+
+  .img-header img {
+    margin-top: 40px;
+    margin-left: 0;
+    width: 280px;
+  }
+
+  .nome-header h1 {
+    font-size: 3rem;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .container-2 {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  
+  .efeito-div {
+    width: 100%;
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    max-width: 100%; /* Limita a largura do texto */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+/* Centraliza a seção */
+#sobre {
+  min-height: auto; /* Garante que ocupe toda a tela */
+  margin-bottom: -200px;
+}
+
+  .sobre-container, .sobre-container1 {    
+    padding: 20px;
+    max-width: 90%;
+}
+
+
+#conhecimento{
+  margin: 120px auto 0px;
+}
+
+.conhecimento-item {
+  max-width: 800px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc; /* Linha separadora entre itens */
+  
+}
+
+.cards-container {
+  gap: 20px; /* Menor espaçamento entre os cards */
+}
+
+.img-port {
+  width: 450px; /* Reduz a largura dos cards */
+  height: 300px; /* Reduz a altura dos cards */
+}
+
+
+.projetos{
+  margin-bottom: 200px;
+}
+
+.projetos h2 {
+  font-size: 24px; /* Ajusta o tamanho do título */
+}
+
+
+.contatos h2 {
+  margin: 0px auto 150px; /* Espaço abaixo do título */
+  text-align: center;
+}
+
+.contatos-container {
+  width: 80%;
+  max-width: 400px;
+}
+
+.input, textarea, .button-confirm {
+  font-size: 14px;
+}
+
+
+  .redes {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* Notebooks */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .redes{
+    margin: 10px auto auto -30px;
+  }
+  
+  
+  .container-header {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container-1 {
+    transform: translate(-10%, 20%);
+  }
+
+  .img-header img {
+    margin-left: 150px;
+    width: 300px;
+  }
+
+  .nome-header h1 {
+    font-size: 3.2rem;
+    margin-left: 80px;
+  }
+
+  
+
+.efeito-div {
+  width: 100%;
+  font-size: 1rem; /* Ajusta o tamanho do texto */
+  max-width: 100%; /* Limita a largura do texto */
+  text-align: center; /* Centraliza o texto */
+}
+
+
+}
+
+/* Desktops */
+@media only screen and (min-width: 1200px) {
+
+  .redes{
+    margin: 10px auto auto -30px;
+  }
+
+  .container-header {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container-1 {
+    transform: translate(-15%, 30%);
+  }
+
+  
+
+.efeito-div {
+  width: 100%;
+  font-size: 1rem; /* Ajusta o tamanho do texto */
+  max-width: 100%; /* Limita a largura do texto */
+  text-align: center; /* Centraliza o texto */
+}
+
+
+}

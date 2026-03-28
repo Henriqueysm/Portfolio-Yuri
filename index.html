@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Portfólio de Yuri Henrique - Desenvolvedor Web e Estudante de Engenharia de Software. Explore meus projetos e entre em contato!">
+  <title> Portfolio Yuri H. </title>
+  <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="imagens/shortcut 1.png">
+  <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="script.js" defer></script>
+</head>
+<body>
+    <script src="reveal.js" defer></script>
+
+<nav class="menu-lateral">
+
+    <div class="btn-expandir">
+        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="svg" width="40" height="40" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg></span>
+    </div> <!-- botão de expandir -->
+               
+        <br>
+    
+    <ul>
+        <li class="item-menu">  
+            <a href="#sobre">
+            <span class="txt-link">SOBRE MIM</span>
+            </a>
+        </li> 
+
+        <li class="item-menu">  
+            <a href="#conhecimento">
+            <span class="txt-link">CONHECIMENTOS</span>
+            </a>
+        </li>
+
+        <li class="item-menu">  
+            <a href="#projetos" class="ativ">
+            <span class="txt-link">PROJETOS</span>
+            </a>
+        </li>
+
+                <li class="item-menu">  
+            <a href="#game">
+            <span class="txt-link">JOGUE CONOSCO</span>
+            </a>
+        </li>
+
+        <li class="item-menu">  
+            <a href="#contatos">
+            <span class="txt-link">FALE COMIGO</span>
+            </a>
+        </li>
+
+
+
+    </ul>
+    
+</nav>
+    
+    
+<script>
+    const menuLateral = document.querySelector('.menu-lateral');
+    const botaoExpandir = document.querySelector('.btn-expandir');
+
+    botaoExpandir.addEventListener('click', () => {
+        menuLateral.classList.toggle('ativo');
+    });
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', (event) => {
+        // Se o clique não foi no menu e não foi no botão
+        if (!menuLateral.contains(event.target) && !botaoExpandir.contains(event.target)) {
+            menuLateral.classList.remove('ativo');
+        }
+    });
+</script>
+
+
+<header id="home" class="container-header">
+  <div class="redes">
+    <a class="socialContainer containerOne efeito-img1" href="https://www.instagram.com/henriquey_sm" target="_blank" rel="noopener noreferrer"> <svg xmlns="http://www.w3.org/2000/svg" class="socialSvg linkdinSvg " width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+    <a class="socialContainer containerTwo efeito-img2"href="https://github.com/Henriqueysm" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" class="socialSvg linkdinSvg " width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+    <a class="socialContainer containerThree efeito-img3" href="https://www.linkedin.com/in/yurihenriquemarques/" target="_blank" rel="noopener noreferrer" > <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg "><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg> </a>
+    <a class="socialContainer containerFour efeito-img4" href="#contato">     <svg viewBox="0 0 16 16" class="socialSvg whatsappSvg "><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path></svg></a>
+  </div>
+
+  <div class="container-1">
+    <div class="img-header">
+      <img src="imagens/fotoperfil (2).jfif" width="350px">
+    </div>
+
+      <div class="nome-header">
+        <h1>YURI HENRIQUE</h1>
+      </div>
+  </div>
+
+
+  <div class="container-2">
+      <div class="typewriter">
+        <h4>
+          <span class="cursor">Desenvolvedor</span>
+          <span id="typed-text"></span>
+        </h4> 
+        <script src="typescript.js"></script>
+      </div>
+        
+
+  </div>
+
+</header>
+
+<!--BOTÃO QUE NAVEGA QUANDO ROLA PRA BAIXO-->
+<a href="#home">
+<button class="button-baixo" id="scrollButton">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle"  viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+  </svg>
+</button></a>
+
+<script>
+    const scrollButton = document.getElementById('scrollButton');
+
+    window.addEventListener('scroll', () => {
+      // Detecta o quanto a página foi rolada (em pixels)
+      const scrollPosition = window.scrollY;
+
+      // Altere o valor 300 para o número de pixels desejado
+      if (scrollPosition > 300) {
+        scrollButton.style.display = 'block'; // Mostra o botão
+      } else {
+        scrollButton.style.display = 'none'; // Esconde o botão
+      }
+    });
+</script>
+<!--BOTÃO QUE NAVEGA QUANDO ROLA PRA BAIXO-->
+
+
+
+<section id="sobre" class="centro">
+    <h2 align="center"> Sobre mim</h2>
+    <div class="sobre-container">
+
+        <div class="efeito-div"> 
+            <p align="left"> 
+              Sou desenvolvedor com formação técnica em Desenvolvimento de Sistemas pela ETEC, com 28 anos e grande interesse em criar experiências digitais modernas
+               e eficientes. <br>Tenho afinidade com o desenvolvimento front-end, onde consigo unir criatividade e tecnologia para construir interfaces intuitivas e 
+               responsivas.
+
+              Além disso, também possuo conhecimentos em back-end utilizando Node.js e Express, o que me permite ter uma visão mais completa do desenvolvimento de 
+              aplicações web. <br>Gosto de aprender continuamente, explorar novas ferramentas e aprimorar minhas habilidades para entregar soluções cada vez melhores.
+
+              Busco oportunidades para crescer profissionalmente, contribuir com projetos desafiadores e evoluir como desenvolvedor, sempre focado em qualidade, 
+              organização e boas práticas de código.
+
+              <br>
+              Sinta-se à vontade para explorar e entrar em contato para colaborações.
+            </p>
+        </div> 
+
+        <!--<img src="imagens/WhatsApp Image 2024-08-03 at 16.03.06.jpeg" class="imgyuri efeito-img9" alt="Foto de Yuri Henrique">-->
+    </div>
+
+    <h2 class="prof" id="work"> Profissional </h2>
+
+    <div class="sobre-container1">
+      <div class="efeito-div"> 
+        <p align="left">Para mais informações sobre meu profissional acesse meu curriculo.</p>
+      </div>   
+    
+
+  
+    <div class="sobre-container1">
+      <div class="efeito-div">
+        <a href="Curriculo Yuri Henrique.pdf" target="_blank">
+                <button class="contato loader curriculo"></button>
+        </a>
+      </div> 
+    </div> 
+</div>  
+</section>
+
+
+
+<section id="conhecimento" class="secao">
+  <h2 align="center"> Conhecimentos </h2> <br><br><br>
+
+  <div class="conhecimento-container">
+  <div class="conhecimento-item">
+    <button class="conhecimento-titulo">Front-End
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+      </svg>
+    </button>
+    <div class="conhecimento-conteudo">
+      <div class="icones">
+        <img src="imagens/html-5.png" alt="HTML" class="icon-conhecimento">
+        <img src="imagens/css-3.png" alt="CSS" class="icon-conhecimento">
+        <img src="imagens/js 1.png" alt="JavaScript" class="icon-conhecimento">
+        <img src="imagens/bootstrap.png" alt="Bootstrap" class="icon-conhecimento">
+        <img src="imagens/react.png" alt="React" class="icon-conhecimento">
+      </div>
+    </div>
+  </div>
+
+  <div class="conhecimento-item">
+    <button class="conhecimento-titulo">Back-End
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+      </svg>
+    </button>
+    <div class="conhecimento-conteudo">
+      <div class="icones">
+        <img src="imagens/c.png" alt="C" class="icon-conhecimento">
+        <img src="imagens/c++.png" alt="C++" class="icon-conhecimento">
+         <img src="imagens/csharp.png" alt="C#" class="icon-conhecimento">
+        <img src="imagens/java.png" alt="Java" class="icon-conhecimento">
+        <img src="imagens/node.png" alt="Node.js" class="icon-conhecimento">
+        <img src="imagens/express.png" alt="Express" class="icon-conhecimento">
+      </div>
+    </div>
+  </div>
+
+  <div class="conhecimento-item">
+    <button class="conhecimento-titulo">Outros
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+      </svg>
+    </button>
+    <div class="conhecimento-conteudo">
+      <div class="icones">
+        <img src="imagens/sql.png" alt="SQL" class="icon-conhecimento">
+        <img src="imagens/mongo.png" alt="MongoDB" class="icon-conhecimento">
+        <img src="imagens/mysql.png" alt="mysql" class="icon-conhecimento">
+         <img src="imagens/git.png" alt="Git" class="icon-conhecimento">
+        <img src="imagens/github.png" alt="GitHub" class="icon-conhecimento">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<script>
+  document.querySelectorAll('.conhecimento-titulo').forEach(button => {
+    button.addEventListener('click', () => {
+      const conteudo = button.nextElementSibling;
+
+      // Fecha todas as outras seções abertas
+      document.querySelectorAll('.conhecimento-conteudo').forEach(el => {
+        if (el !== conteudo) {
+          el.style.display = 'none';
+        }
+      });
+
+      // Alterna a visibilidade do conteúdo
+      conteudo.style.display = (conteudo.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+</script>
+
+
+
+
+
+
+<section class="projetos centro">
+  <h2 id="projetos">Projetos</h2>
+
+  <div class="cards-container">
+
+  <a href="https://arquivo-jedi.vercel.app/" target="_blank">
+    <div class="img-port" style="background-image: url(imagens/site\ arqivo\ jedi.png);">
+      <div class="overlay">Site Arquivo Jedi</div>
+    </div>
+  </a>
+
+  <a href="https://saudeocular.vercel.app/Index.html" target="_blank">
+    <div class="img-port" style="background-image: url(imagens/site\ clinica\ saude\ ocular.png);">
+      <div class="overlay">Sistema Clinica Saude Ocular</div>
+    </div>
+  </a>
+
+  <a href="https://fast-delivery-vert.vercel.app/index.html" target="_blank" >
+    <div class="img-port" style="background-image: url(imagens/site\ restaurante\ delivery.png);">
+      <div class="overlay">Sistema Delivery de Restaurante com Login de Restaurante </div>
+   </div>
+  </a>
+
+    <a href="https://site-empresarial.vercel.app/" target="_blank" >
+    <div class="img-port" style="background-image: url(imagens/site\ empresarial.png);">
+      <div class="overlay">Site Empresarial</div>
+   </div>
+  </a>
+
+  </div>
+</section>
+
+
+<section id="game" class="game-board">
+
+    <div class="score-container">
+        <h1>Mario Game</h1>
+        <div class="score">Score Atual: <span id="score">0</span>s</div>
+        <div class="best-scores">Melhores scores: <span id="best-score">---</span></div>
+        <button id="start-btn">Iniciar Jogo</button>
+    </div>
+    
+    <img src="./imagens/clouds.png" class="clouds">
+    <img src="./imagens/mario.gif" class="mario">
+    <img src="./imagens/pipe.png" class="pipe" >
+
+</section>
+
+<section class="contatos centro" id="contatos">
+  <h2 id="projetos">Contatos</h2>
+
+  <div class="contatos-container">
+    <form action="https://api.staticforms.xyz/submit" method="post" class="formulario">
+      <div class="title">Fale comigo</div>
+      <input type="hidden" name="accessKey" value="0f613212-c86a-4b95-a652-f4d5a2cbe87b">
+      <input class="input" type="text" name="name" autocomplete="off" placeholder="Nome" required>
+      <input class="input" type="text" name="email" autocomplete="off" placeholder="E-mail" required>
+      <textarea class="input" name="message" autocomplete="off" placeholder="Escreva para mim" height="20" required></textarea>
+
+      <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
+      <input type="hidden" name="redirectTo" value="https://portfolioyhsm.vercel.app"> <!-- Optional -->
+      <input type="text" name="honeypot" style="display: none;">
+
+      <button id="button" type="submit" class="button-confirm email"> Encaminhar →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p class="txt-foot">Todos os direitos reservados. Portfolio desenvolvido por Yuri Henrique|Dev.</p>
+</footer>
+
+
+
+</body>
+
+</html>
