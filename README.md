@@ -104,7 +104,7 @@ Jogo interativo desenvolvido com JavaScript puro.
 
 ```bash
 # Clone o repositório
-git clone [https://github.com/seuusuario/seurepositorio](https://github.com/Henriqueysm/Portfolio-Yuri)
+git clone [](https://github.com/Henriqueysm/Portfolio-Yuri)
 
 # Abra o arquivo index.html no navegador
 ```
