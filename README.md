@@ -77,11 +77,11 @@ Jogo interativo desenvolvido com JavaScript puro.
 
 ## 📸 Preview
 
-![Print 1](C:\Users\yurih\OneDrive\Documentos\Portfolio-Yuri\imagens\print 1.png)
+![Print 1](imagens/print-1.png)
 
-![Print 2] (imagens\print 2.png)
+[Print 2](imagens/print-2.png)
 
-![Print 3](imagens/print-2.png)
+![Print 3](imagens/print-3.png)
 
 
 ---
