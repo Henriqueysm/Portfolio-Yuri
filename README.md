@@ -1,6 +1,6 @@
-# 💼 Meu Portfólio
+# 💼 Portfólio - Yuri Henrique
 
-Este é o meu portfólio pessoal, onde apresento meus projetos, habilidades e experiências como desenvolvedor.
+Este é o meu portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e experiências como desenvolvedor web.
 
 ## 🌐 Acesse o projeto
 
@@ -10,71 +10,104 @@ Este é o meu portfólio pessoal, onde apresento meus projetos, habilidades e ex
 
 ## 🧑‍💻 Sobre mim
 
-Sou um desenvolvedor focado em criar aplicações modernas, responsivas e com ótima experiência de usuário.
+Sou desenvolvedor com formação técnica em Desenvolvimento de Sistemas pela ETEC.
 
-* 💡 Apaixonado por tecnologia
-* 🚀 Sempre aprendendo novas ferramentas
-* 🎯 Focado em desenvolvimento web
+* 💻 Foco em desenvolvimento Front-End
+* ⚙️ Conhecimento em Back-End com Node.js e Express
+* 🚀 Interesse em criar interfaces modernas e responsivas
+* 📚 Sempre aprendendo novas tecnologias
 
 ---
 
 ## 🛠️ Tecnologias utilizadas
 
-* **Frontend:** Html, Css, JavaScript
-* **Outros:** VSCode, Git, GitHub, Vercel
+### 🎨 Front-End
+
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+
+### 🔧 Outros
+
+* Git
+* GitHub
+* Vercel
 
 ---
 
 ## 📂 Projetos
 
-Aqui estão alguns dos projetos disponíveis no portfólio:
+### 🔹 Arquivo Jedi
 
-### 🔹 Projeto 1
+Sistema web com temática geek.
 
-* Descrição breve do projeto
-* Tecnologias usadas
-* [🔗 Ver projeto](https://github.com/Henriqueysm/arquivo-jedi)
+* 🌐 Demo: https://arquivo-jedi.vercel.app/
+* 💻 Código: https://github.com/Henriqueysm/arquivo-jedi
 
-### 🔹 Projeto 2
+---
 
-* Descrição breve
-* Tecnologias
-* [🔗 Ver projeto](https://github.com/Henriqueysm/Fast-delivery)
+### 🔹 Clínica Saúde Ocular
+
+Sistema web para gestão de clínica.
+
+* 🌐 Demo: https://saudeocular.vercel.app/Index.html
+* 💻 Código: https://github.com/Henriqueysm/Clinica-Oftalmologica
+
+---
+
+### 🔹 Sistema de Delivery
+
+Aplicação com login e gerenciamento de pedidos.
+
+* 🌐 Demo: https://fast-delivery-vert.vercel.app/index.html
+* 💻 Código: https://github.com/Henriqueysm/Fast-delivery
+
+---
+
+
+### 🎮 Mini Game - Mario
+
+Jogo interativo desenvolvido com JavaScript puro.
+
+* 🕹️ Integrado ao portfólio
+* 🎯 Sistema de pontuação
 
 ---
 
 ## 📸 Preview
 
-![preview](./public/preview.png)
+![preview][(./imagens/preview.png)](https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%201.png)
+https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%202.png
+https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%203.png
+https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%204.png
+https://github.com/Henriqueysm/Portfolio-Yuri/blob/main/imagens/print%205.png
 
 ---
 
 ## 📬 Contato
 
-* Email: [yuridelara@hotmail.com](mailto:yuridelara@hotmail.com)
-* LinkedIn: [(https://www.linkedin.com/in/yurihenriquemarques/)](https://www.linkedin.com/in/yurihenriquemarques/)
-* GitHub: [https://github.com/seuusuario](https://github.com/Henriqueysm)
+* 📧 Email: (adicione)
+* 💼 LinkedIn: https://www.linkedin.com/in/yurihenriquemarques/
+* 💻 GitHub: https://github.com/Henriqueysm
+* 📸 Instagram: https://www.instagram.com/henriquey_sm
 
 ---
 
-## ⚙️ Como rodar o projeto
+## ⚙️ Como executar o projeto
 
 ```bash
-# clonar
-git clone https://github.com/seuusuario/seurepo
+# Clone o repositório
+git clone [https://github.com/seuusuario/seurepositorio](https://github.com/Henriqueysm/Portfolio-Yuri)
 
-# instalar dependências
-npm install
-
-# rodar
-npm run dev
+# Abra o arquivo index.html no navegador
 ```
 
 ---
 
 ## 🚀 Deploy
 
-Projeto hospedado na **Vercel**.
+Projeto hospedado na Vercel.
 
 ---
 
