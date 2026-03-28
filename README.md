@@ -83,6 +83,7 @@ Jogo interativo desenvolvido com JavaScript puro.
 
 ![Print 3](imagens/print-3.png)
 
+<img src="./imagens/print 1.png" alt="descrição" width="800">
 
 ---
 
